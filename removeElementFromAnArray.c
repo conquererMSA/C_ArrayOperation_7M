@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<limits.h>
 int main(){
       int lenOfArray;
       scanf("%d",&lenOfArray);
@@ -9,7 +8,7 @@ int main(){
       }
       int removeIndex;
       scanf("%d",&removeIndex);
-      for(int i=lenOfArray-1; i<=removeIndex;i--){
+      for(int i=removeIndex; i<lenOfArray-1; i++){
         arr[i]=arr[i+1];
       }
       for(int i=0; i<lenOfArray-1;i++){
@@ -17,3 +16,8 @@ int main(){
       }
     return 0;
 }
+
+// 10
+// 10 20 30 40 50 60 70 80 90 100
+// 4
+//// 10 20 30 40 60 70 80 90 100
